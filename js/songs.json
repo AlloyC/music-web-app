@@ -1,0 +1,90 @@
+[
+  {
+    "id": "01",
+    "title": "call me by you name",
+    "artist": "lil nas X",
+    "duration": "2:19",
+    "img": "./images/one-last-time.jpg",
+    "src": "../audio/Lil-Nas-X-Montero-Call-Me-By-Your-Name-(TrendyBeatz.com).mp3"
+  },
+  {
+    "id": "02",
+    "title": "Back in office",
+    "artist": "Mayorkun",
+    "duration": "3:31",
+    "img": "./images/one-last-time.jpg",
+    "src": "./audio/Mayorkun - Back in Office (Official Music Video).mp3"
+  },
+  {
+    "id": "03",
+    "title": "Online link",
+    "artist": "Eminem (deezer)",
+    "duration": "0:30",
+    "img": "./images/one-last-time.jpg",
+    "src": "https://cdns-preview-5.dzcdn.net/stream/c-5537a43419bae1f2f06b45ea99413ec4-8.mp3"
+  },
+  {
+    "id": "04",
+    "title": "Middle of the night",
+    "artist": "Elley Duhé",
+    "duration": "3:03",
+    "img": "./images/one-last-time.jpg",
+    "src": "./audio/Elley Duhé - Middle of the Night (Lyrics).mp3"
+  },
+  {
+    "id": "05",
+    "title": "Wrecking Ball",
+    "artist": "Miley Cyrus",
+    "duration": "3:46",
+    "img": "./images/one-last-time.jpg",
+    "src": "./audio/Miley_Cyrus_-_Wrecking_Ball.mp3"
+  },
+  {
+    "id": "06",
+    "title": "Holy Father",
+    "artist": "Mayorkun & Victony",
+    "duration": "3:05",
+    "img": "./images/one-last-time.jpg",
+    "src": "./audio/Mayorkun & Victony - Holy Father (Official Audio).mp3"
+  },
+  {
+    "id": "07",
+    "title": "Peace",
+    "artist": "Mannywellz feat. Tems",
+    "duration": "3:14",
+    "img": "./images/one-last-time.jpg",
+    "src": "./audio/Mannywellz_-_Peace_(feat._Tems).mp3"
+  },
+  {
+    "id": "08",
+    "title": "That's what I want",
+    "artist": "Lil Nas X",
+    "duration": "2:24",
+    "img": "./images/one-last-time.jpg",
+    "src": "./audio/Lil-Nas-X-That’s-What-I-Want-(TrendyBeatz.com).mp3"
+  },
+  {
+    "id": "09",
+    "title": "My baby bad",
+    "artist": "Fave",
+    "duration": "3:10",
+    "img": "./images/one-last-time.jpg",
+    "src": "./audio/Fave_-_my_baby_bad_my_baby_goodcom.mp3"
+  },
+  {
+    "id": "10",
+    "title": "Dimension",
+    "artist": "JAE5 Ft Skepta & Rema",
+    "duration": "3:54",
+    "img": "./images/one-last-time.jpg",
+    "src": "./audio/JAE5_Dimension_Ft_Skepta_And_Rema_9jaflaver.com_.mp3"
+  },
+  {
+    "id": "11",
+    "title": "One Last Time",
+    "artist": "Arian Grande",
+    "duration": "3:18",
+    "img": "./images/one-last-time.jpg",
+    "src": "./audio/Ariana_Grande_-_One_Last_Time_(Lyric_Video)(256k).mp3"
+  }
+]
