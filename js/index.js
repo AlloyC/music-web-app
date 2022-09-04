@@ -96,7 +96,8 @@ fetch("js/songs.json")
       datumId.forEach((datumArr) => {
         document
           .getElementById(datumArr)
-          .addEventListener("click", function changeSong() {
+          .addEventListener("click", function changeSong(e) {
+            e.preventDefault()
             // toggling active class (highlighting the clicked/ currently playing song)
             datumId.forEach((datum) => {
               document.getElementById(datum).classList.remove("active");

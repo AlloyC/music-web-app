@@ -5,7 +5,7 @@
     "artist": "lil nas X",
     "duration": "2:19",
     "img": "./images/one-last-time.jpg",
-    "src": "../audio/Lil-Nas-X-Montero-Call-Me-By-Your-Name-(TrendyBeatz.com).mp3"
+    "src": "https://cdn.trendybeatz.com/audio/Lil-Nas-X-Montero-Call-Me-By-Your-Name-(TrendyBeatz.com).mp3"
   },
   {
     "id": "02",
@@ -13,7 +13,7 @@
     "artist": "Mayorkun",
     "duration": "3:31",
     "img": "./images/one-last-time.jpg",
-    "src": "./audio/Mayorkun - Back in Office (Official Music Video).mp3"
+    "src": "https://cdn.trendybeatz.com/audio/Mayorkun-Back-In-Office-(TrendyBeatz.com).mp3"
   },
   {
     "id": "03",
@@ -29,7 +29,7 @@
     "artist": "Elley Duhé",
     "duration": "3:03",
     "img": "./images/one-last-time.jpg",
-    "src": "./audio/Elley Duhé - Middle of the Night (Lyrics).mp3"
+    "src": "https://jesusful.com/wp-content/uploads/music/2022/07/Elley_Duhe_-_Middle_Of_The_Night_(Jesusful.com).mp3"
   },
   {
     "id": "05",
@@ -37,7 +37,7 @@
     "artist": "Miley Cyrus",
     "duration": "3:46",
     "img": "./images/one-last-time.jpg",
-    "src": "./audio/Miley_Cyrus_-_Wrecking_Ball.mp3"
+    "src": "https://www1.morexlusive.com/wp-content/uploads/2022/01/Miley_Cyrus_-_Wrecking_Ball.mp3"
   },
   {
     "id": "06",
@@ -45,7 +45,7 @@
     "artist": "Mayorkun & Victony",
     "duration": "3:05",
     "img": "./images/one-last-time.jpg",
-    "src": "./audio/Mayorkun & Victony - Holy Father (Official Audio).mp3"
+    "src": "https://www1.morexlusive.com/wp-content/uploads/2021/10/Mayorkun_Ft_Victony_-_Holy_Father.mp3"
   },
   {
     "id": "07",
@@ -61,23 +61,23 @@
     "artist": "Lil Nas X",
     "duration": "2:24",
     "img": "./images/one-last-time.jpg",
-    "src": "./audio/Lil-Nas-X-That’s-What-I-Want-(TrendyBeatz.com).mp3"
+    "src": "https://www1.morexlusive.com/wp-content/uploads/2022/01/Lil_Nas_X_-_THATS_WHAT_I_WANT.mp3"
   },
   {
     "id": "09",
-    "title": "My baby bad",
+    "title": "Baby Riddim",
     "artist": "Fave",
     "duration": "3:10",
     "img": "./images/one-last-time.jpg",
-    "src": "./audio/Fave_-_my_baby_bad_my_baby_goodcom.mp3"
+    "src": "https://www1.morexlusive.com/wp-content/uploads/2021/10/Fave_-_Baby_Riddim.mp3"
   },
   {
     "id": "10",
-    "title": "Dimension",
-    "artist": "JAE5 Ft Skepta & Rema",
-    "duration": "3:54",
+    "title": "No fit Vex",
+    "artist": "Burna Boy",
+    "duration": "3:41",
     "img": "./images/one-last-time.jpg",
-    "src": "./audio/JAE5_Dimension_Ft_Skepta_And_Rema_9jaflaver.com_.mp3"
+    "src": "https://cdn.trendybeatz.com/audio/Burna-Boy-No-Fit-Vex.mp3"
   },
   {
     "id": "11",
@@ -85,6 +85,6 @@
     "artist": "Arian Grande",
     "duration": "3:18",
     "img": "./images/one-last-time.jpg",
-    "src": "./audio/Ariana_Grande_-_One_Last_Time_(Lyric_Video)(256k).mp3"
+    "src": "https://trendzhiphop.com/wp-content/uploads/2022/05/Ariana-Grande-One-Last-Time.mp3"
   }
 ]
