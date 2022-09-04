@@ -165,10 +165,10 @@ nav {
 
 /* div housing album covers */
 #horizontal-scroll {
+  overflow-x: scroll;
   display: grid;
   grid-gap: 20px;
   align-items: center;
-  overflow-x: scroll;
   width: 100%;
 }
 
@@ -176,7 +176,8 @@ nav {
 .horizontal-scroll-content {
   display: flex;
   flex-direction: column;
-  min-width: fit-content;
+ min-width: fit-content;
+ margin-top: 20px;
 }
 
 .horizontal-scroll-content img {
