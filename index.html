@@ -14,9 +14,16 @@
     <title>Music App</title>
   </head>
   <body>
+    <!-- LIST OF ARTISTS -->
     <section id="search-top-artist">
       <div id="search">
-        <input type="search" name="search-input" id="search-input" placeholder="Search for artist, song and ..." value="" />
+        <input
+          type="search"
+          name="search-input"
+          id="search-input"
+          placeholder="Search for artist, song and ..."
+          value=""
+        />
         <div id="user">
           <i></i>
           <img id="user-img" src="" alt="display picture" />
@@ -30,17 +37,20 @@
           <h2 class="bold-header">Top Artists -</h2>
           <p class="top-20">Top 20</p>
         </div>
-        <div id="horizontal-scroll">
-          
-        </div>
+        <div id="horizontal-scroll"></div>
       </div>
     </section>
+
+    <!-- PLAYLIST SECTION -->
     <section id="main-section">
+      <!-- header sectiion of playlist -->
       <div id="my-playlist">
         <div class="heading">
           <h2 class="bold-header">My Playlist</h2>
           <button id="show" class="btn-show | cl-gray">Show All</button>
         </div>
+
+        <!-- left side container housing the songs -->
         <div id="container">
           <ol id="songs">
             <li class="song">
@@ -52,22 +62,32 @@
           </ol>
         </div>
       </div>
+
+      <!-- right side container showing current song being played -->
       <div id="now-playing">
         <h2 class="bold-header">Now Playing</h2>
         <div class="container">
+          <!-- Picture of artist -->
           <img id="song-img" src="./images/images-3.webp" alt="song image" />
           <h3 id="song-title"></h3>
           <h4 id="artist"></h4>
+
+          <!-- progress bar of song -->
           <div class="progress-bar">
             <div id="progress-bar"></div>
             <span id="progress"></span>
             <audio style.display="none" src=""></audio>
           </div>
+
+          <!-- time duration of the song -->
           <div id="time-duration">
             <p id="total-duration"></p>
             <p id="time-played"></p>
           </div>
+
+          <!-- play,shuffle,pause,etc icons -->
           <div id="playing-icons">
+            <!-- SHUFFLE BTN -->
             <button id="shuffle" class="btn-show" type="submit">
               <img
                 id="shuffle-img"
@@ -76,6 +96,8 @@
                 alt="shuffle"
               />
             </button>
+
+            <!-- PREVIOUS BTN -->
             <button id="prev-btn" class="btn-show" type="submit">
               <img
                 id="prev-img"
@@ -84,6 +106,8 @@
                 alt="previous song"
               />
             </button>
+
+            <!-- PLAY BTN -->
             <button id="play-btn" class="btn-show" type="submit">
               <img
                 id="play/pause-img"
@@ -92,6 +116,8 @@
                 alt="play / pause"
               />
             </button>
+
+            <!-- NEXT BTN -->
             <button id="next-btn" class="btn-show" type="submit">
               <img
                 id="next-img"
@@ -100,6 +126,8 @@
                 alt="next song"
               />
             </button>
+
+            <!-- REPEAT BTN -->
             <button id="repeat" class="btn-show" type="submit">
               <img
                 id="repeat-img"
@@ -111,7 +139,7 @@
           </div>
         </div>
       </div>
-    </section>  
+    </section>
     <script src="js/index.js"></script>
   </body>
 </html>

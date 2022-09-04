@@ -169,6 +169,7 @@ fetch("js/songs.json")
             </li>`;
       datumId.push(datum.id);
       audioSrc.push(datum.src);
+
       //LISTENING FOR CLICK
       datumId.forEach((datumArr) => {
         document
