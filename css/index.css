@@ -218,8 +218,11 @@ nav {
 /* div containing top artist heading */
 #top-artists div {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
 }
+
 
 /* div housing album covers */
 #horizontal-scroll {
