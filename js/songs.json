@@ -17,10 +17,11 @@
   },
   {
     "id": "03",
-    "title": "Way Too Big",
-    "artist": "Burna Boy",
-    "duration": "2:14",
-    "img": "https://trendybeatz.com/download-mp3/2409/burna-boy-way-too-big"
+    "title": "Online link",
+    "artist": "Eminem (deezer)",
+    "duration": "0:30",
+    "img": "./images/one-last-time.jpg",
+    "src": "https://cdns-preview-5.dzcdn.net/stream/c-5537a43419bae1f2f06b45ea99413ec4-8.mp3"
   },
   {
     "id": "04",
@@ -52,7 +53,7 @@
     "artist": "Mannywellz feat. Tems",
     "duration": "3:14",
     "img": "./images/one-last-time.jpg",
-    "src": "https://cdn.trendybeatz.com/audio/Mannywellz-ft-Tems-Peace-(TrendyBeatz.com).mp3"
+    "src": "./audio/Mannywellz_-_Peace_(feat._Tems).mp3"
   },
   {
     "id": "08",
@@ -72,11 +73,11 @@
   },
   {
     "id": "10",
-    "title": "Dimension",
-    "artist": "JAE5 Ft Skepta & Rema",
-    "duration": "3:54",
+    "title": "No fit Vex",
+    "artist": "Burna Boy",
+    "duration": "3:41",
     "img": "./images/one-last-time.jpg",
-    "src": "https://cdn.trendybeatz.com/audio/Rema-Ft-Jae5-And-Skepta-Dimension-(TrendyBeatz.com).mp3"
+    "src": "https://cdn.trendybeatz.com/audio/Burna-Boy-No-Fit-Vex.mp3"
   },
   {
     "id": "11",
