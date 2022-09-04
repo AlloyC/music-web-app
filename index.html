@@ -52,132 +52,145 @@
         </div>
       </nav>
 
-      <!-- LIST OF ARTISTS -->
-      <section id="search-top-artist">
-        <div id="search">
-          <input
-            type="search"
-            name="search-input"
-            id="search-input"
-            placeholder="Search for artist, song and ..."
-            value=""
-          />
-          <div id="user">
-            <i></i>
-            <img id="user-img" src="" alt="display picture" />
-            <h2 id="username"></h2>
-            <i></i>
-          </div>
-        </div>
-        <hr />
-        <div id="top-artists">
-          <div>
-            <h2 class="bold-header">Top Artists -</h2>
-            <p class="top-20">Top 20</p>
-          </div>
-          <div id="horizontal-scroll"></div>
-        </div>
-      </section>
-
-      <!-- PLAYLIST SECTION -->
-      <section id="main-section">
-        <!-- header sectiion of playlist -->
-        <div id="my-playlist">
-          <div class="heading">
-            <h2 class="bold-header">My Playlist</h2>
-            <button id="show" class="btn-show | cl-gray">Show All</button>
-          </div>
-
-          <!-- left side container housing the songs -->
-          <div id="container">
-            <ol id="songs">
-              <li class="song">
-                <h3 class="number | cl-gray">#</h3>
-                <h3 class="title | cl-gray">Title</h3>
-                <h3 class="artist | cl-gray">Artist</h3>
-                <h3 class="time | cl-gray">Time</h3>
-              </li>
-            </ol>
-          </div>
-        </div>
-
-        <!-- right side container showing current song being played -->
-        <div id="now-playing">
-          <h2 class="bold-header">Now Playing</h2>
-          <div class="container">
-            <!-- Picture of artist -->
-            <img id="song-img" src="./images/images-3.webp" alt="song image" />
-            <h3 id="song-title"></h3>
-            <h4 id="artist"></h4>
-
-            <!-- progress bar of song -->
-            <div class="progress-bar">
-              <div id="progress-bar"></div>
-              <span id="progress"></span>
-              <audio style.display="none" src=""></audio>
+      <!-- SECTION CONTAINING MUSIC -->
+      <sub>
+        <!-- LIST OF ARTISTS -->
+        <section id="search-top-artist">
+          <!-- Search bar -->
+          <div id="search">
+            <div class="search-box">
+              <input
+                type="search"
+                name="search-input"
+                id="search-input"
+                placeholder="Search for artist, song and ..."
+                value=""
+              />
+              <ion-icon class="search-icon" name="search-outline"></ion-icon>
             </div>
-
-            <!-- time duration of the song -->
-            <div id="time-duration">
-              <p id="total-duration"></p>
-              <p id="time-played"></p>
-            </div>
-
-            <!-- play,shuffle,pause,etc icons -->
-            <div id="playing-icons">
-              <!-- SHUFFLE BTN -->
-              <button id="shuffle" class="btn-show" type="submit">
-                <img
-                  id="shuffle-img"
-                  class="icon"
-                  src="./images/icons8-shuffle-50.png"
-                  alt="shuffle"
-                />
-              </button>
-
-              <!-- PREVIOUS BTN -->
-              <button id="prev-btn" class="btn-show" type="submit">
-                <img
-                  id="prev-img"
-                  class="icon"
-                  src="./images/icons8-rewind-50.png"
-                  alt="previous song"
-                />
-              </button>
-
-              <!-- PLAY BTN -->
-              <button id="play-btn" class="btn-show" type="submit">
-                <img
-                  id="play/pause-img"
-                  class="icon"
-                  src="./images/icons8-play-50.png"
-                  alt="play / pause"
-                />
-              </button>
-
-              <!-- NEXT BTN -->
-              <button id="next-btn" class="btn-show" type="submit">
-                <img
-                  id="next-img"
-                  class="icon"
-                  src="./images/icons8-fast-forward-50.png"
-                  alt="next song"
-                />
-              </button>
-
-              <!-- REPEAT BTN -->
-              <button id="repeat" class="btn-show" type="submit">
-                <img
-                  id="repeat-img"
-                  class="icon"
-                  src="./images/icons8-repeat-24.png"
-                  alt="repeat song"
-                />
-              </button>
+            <div id="user">
+              <i></i>
+              <img id="user-img" src="" alt="display picture" />
+              <h2 id="username"></h2>
+              <i></i>
             </div>
           </div>
-        </div>
-      </section>
+          <hr />
+
+          <!-- Album covers -->
+          <div id="top-artists">
+            <div>
+              <h2 class="bold-header">Top Artists -</h2>
+              <p class="top-20">Top 20</p>
+            </div>
+            <div id="horizontal-scroll"></div>
+          </div>
+        </section>
+
+        <!-- PLAYLIST SECTION -->
+        <section id="main-section">
+          <!-- header sectiion of playlist -->
+          <div id="my-playlist">
+            <div class="heading">
+              <h2 class="bold-header">My Playlist</h2>
+              <button id="show" class="btn-show | cl-gray">Show All</button>
+            </div>
+
+            <!-- left side container housing the songs -->
+            <div id="container">
+              <ol id="songs">
+                <li class="song">
+                  <h3 class="number | cl-gray">#</h3>
+                  <h3 class="title | cl-gray">Title</h3>
+                  <h3 class="artist | cl-gray">Artist</h3>
+                  <h3 class="time | cl-gray">Time</h3>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- right side container showing current song being played -->
+          <div id="now-playing">
+            <h2 class="bold-header">Now Playing</h2>
+            <div class="container">
+              <!-- Picture of artist -->
+              <img
+                id="song-img"
+                src="./images/images-3.webp"
+                alt="song image"
+              />
+              <h3 id="song-title"></h3>
+              <h4 id="artist"></h4>
+
+              <!-- progress bar of song -->
+              <div class="progress-bar">
+                <div id="progress-bar"></div>
+                <span id="progress"></span>
+                <audio style.display="none" src=""></audio>
+              </div>
+
+              <!-- time duration of the song -->
+              <div id="time-duration">
+                <p id="total-duration"></p>
+                <p id="time-played"></p>
+              </div>
+
+              <!-- play,shuffle,pause,etc icons -->
+              <div id="playing-icons">
+                <!-- SHUFFLE BTN -->
+                <button id="shuffle" class="btn-show" type="submit">
+                  <img
+                    id="shuffle-img"
+                    class="icon"
+                    src="./images/icons8-shuffle-50.png"
+                    alt="shuffle"
+                  />
+                </button>
+
+                <!-- PREVIOUS BTN -->
+                <button id="prev-btn" class="btn-show" type="submit">
+                  <img
+                    id="prev-img"
+                    class="icon"
+                    src="./images/icons8-rewind-50.png"
+                    alt="previous song"
+                  />
+                </button>
+
+                <!-- PLAY BTN -->
+                <button id="play-btn" class="btn-show" type="submit">
+                  <img
+                    id="play/pause-img"
+                    class="icon"
+                    src="./images/icons8-play-50.png"
+                    alt="play / pause"
+                  />
+                </button>
+
+                <!-- NEXT BTN -->
+                <button id="next-btn" class="btn-show" type="submit">
+                  <img
+                    id="next-img"
+                    class="icon"
+                    src="./images/icons8-fast-forward-50.png"
+                    alt="next song"
+                  />
+                </button>
+
+                <!-- REPEAT BTN -->
+                <button id="repeat" class="btn-show" type="submit">
+                  <img
+                    id="repeat-img"
+                    class="icon"
+                    src="./images/icons8-repeat-24.png"
+                    alt="repeat song"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </sub>
     </main>
     <script src="js/index.js"></script>
     <script
