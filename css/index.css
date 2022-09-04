@@ -34,15 +34,30 @@
 /* MAIN TAG */
 main {
   display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: minmax(200px, 1fr) 5fr;
   grid-column-gap: 20px;
+  height: minmax(100vh, 130vh);
+  justify-content: center;
+  align-items: center;
+}
+
+/* SUB TAG */
+sub {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-image: linear-gradient(
+    45deg,
+    rgba(214, 204, 226, 0.84),
+    rgb(130, 104, 167)
+  );
+  padding: 30px;
 }
 
 nav {
   position: relative;
   grid-column: 1/2;
   grid-row: 1/-1;
+  background-color: var(--dark-white);
 }
 
 /* NAVIGATION */
@@ -79,6 +94,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .nav-el i {
@@ -97,6 +113,45 @@ nav {
   grid-row: 1/2;
 }
 
+/* start of search section */
+#search {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  overflow: initial;
+}
+
+/* div housing the search bar */
+.search-box {
+  position: relative;
+  width: 60%;
+  overflow: initial;
+}
+
+#search-input {
+  border-radius: 20px;
+  border: none;
+  height: 30px;
+  width: 100%;
+  background-color: var(--dark-white);
+  padding: 20px;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
+  padding-left: 50px;
+}
+
+#search-input:focus {
+  outline: none;
+}
+
+/* search-icon */
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  font-size: 20px;
+}
+
+/* Start of Album covers */
 #top-artists {
   display: flex;
   flex-direction: column;
@@ -105,19 +160,38 @@ nav {
 /* div containing top artist heading */
 #top-artists div {
   display: flex;
+  margin-bottom: 20px;
 }
 
+/* div housing album covers */
 #horizontal-scroll {
+  display: grid;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+/* div representing each album cover */
+.horizontal-scroll-content {
   display: flex;
+  flex-direction: column;
+
+  overflow: initial;
+}
+
+.horizontal-scroll-content img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.horizontal-scroll-content img,
+.horizontal-scroll-content h3 {
+  margin-bottom: 10px;
 }
 
 /* GENERAL CLASSES */
 #main-section {
-  background-image: linear-gradient(
-    45deg,
-    rgba(197, 177, 225, 1),
-    rgba(197, 177, 225, 0.8)
-  );
   display: grid;
   grid-template-columns: 60% 40%;
   min-height: max-content;

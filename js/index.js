@@ -1,39 +1,39 @@
 let topArtist = [
   {
     id: 1,
-    img: "./images/",
+    img: "./images/Beyonce.webp",
     name: "Beyonce",
     song: "Renaissance",
   },
   {
     id: 2,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
+    img: "./images/bts.jpg",
+    name: "BTS",
+    song: "Yet to Come",
+  },
+  {
+    id: 3,
+    img: "./images/Dua-Lipa.webp",
+    name: "Dua Lipa",
+    song: "Under the Lights",
   },
   {
     id: 4,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
+    img: "./images/the-weeknd.jpg",
+    name: "The Weeknd",
+    song: "Out of Time",
   },
   {
     id: 5,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
+    img: "./images/taylor-swift.webp",
+    name: "Taylor Swift",
+    song: "Carolina",
   },
   {
     id: 6,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
-  },
-  {
-    id: 7,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
+    img: "./images/Burna-boy.webp",
+    name: "Burna Boy",
+    song: "Last Last",
   },
 ];
 
@@ -70,8 +70,8 @@ let activeIndex;
 topArtist.forEach((eachArtist) => {
   artistList.innerHTML += `
   <div class="horizontal-scroll-content">
-            <img id="artists-${eachArtist.id}" src="${eachArtist}" alt="" />
-            <h3 id="artist-song-title-${eachArtist.id}">${eachArtist.title}</h3>
+            <img id="artists-${eachArtist.id}" src="${eachArtist.img}" alt="" />
+            <h3 id="artist-song-title-${eachArtist.id}">${eachArtist.song}</h3>
             <p id="artist-name-${eachArtist.id}">${eachArtist.name}</p>
           </div>`;
 });
