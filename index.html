@@ -22,19 +22,34 @@
   </head>
   <body>
     <main>
-      <nav class="navigation">
-        <ul class="home-nav">
-          <li><i class="fa-light fa-house"></i>Home</li>
-          <li><i class="fa-duotone fa-compass"></i>Browse</li>
-          <li><i class="fa-brands fa-twitter"></i>Album</li>
-          <li>Videos</li>
-        </ul>
+      <nav>
+        <div class="navigation">
+          <!-- upper part of navigation -->
+          <ul class="home-nav">
+            <li class="nav-el"><i class="fa-solid fa-house"></i>Home</li>
+            <li class="nav-el"><i class="fa-regular fa-compass"></i>Browse</li>
+            <li class="nav-el">
+              <ion-icon name="albums-sharp"></ion-icon>Album
+            </li>
+            <li class="nav-el">
+              <ion-icon name="videocam-outline"></ion-icon>Videos
+            </li>
+          </ul>
 
-        <ul class="my-music">
-          <li>Recently Played</li>
-          <li>Local Files</li>
-          <li>Settings</li>
-        </ul>
+          <!-- Lower part of navigation -->
+          <ul class="music-nav">
+            <li class="nav-el"><h2>MY MUSIC</h2></li>
+            <li class="nav-el">
+              <ion-icon name="alarm-outline"></ion-icon>Recently Played
+            </li>
+            <li class="nav-el">
+              <ion-icon name="document-outline"></ion-icon>Local Files
+            </li>
+            <li class="nav-el">
+              <ion-icon name="settings-outline"></ion-icon>Settings
+            </li>
+          </ul>
+        </div>
       </nav>
 
       <!-- LIST OF ARTISTS -->
@@ -165,5 +180,13 @@
       </section>
     </main>
     <script src="js/index.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

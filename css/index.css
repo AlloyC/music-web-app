@@ -36,21 +36,59 @@ main {
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 1fr 1fr;
+  grid-column-gap: 20px;
+}
+
+nav {
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/-1;
 }
 
 /* NAVIGATION */
 .navigation {
-  grid-column: 1/2;
   position: fixed;
-  left: 0;
+  left: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  top: 100px;
+  margin-left: 20px;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.home-nav {
+  margin-bottom: 35px;
+}
+
+.music-nav li:first-child {
+  color: var(--gray);
+  font-size: 13px;
+}
+
+/* nav li elements and font styling */
+.nav-el {
+  margin-bottom: 25px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.home-nav {
-  margin-bottom: 30px;
+.nav-el i {
+  font-size: 25px;
+  margin-right: 15px;
+}
+
+.nav-el ion-icon {
+  font-size: 25px;
+  margin-right: 15px;
 }
 
 /* UPPER SECTION */
