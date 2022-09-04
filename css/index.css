@@ -39,6 +39,11 @@
   z-index: 5;
   background-color: rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out;
+  pointer-events: all;
+}
+
+.overlay {
+  pointer-events: none;
 }
 
 /* MAIN TAG */
@@ -466,11 +471,13 @@ a {
     padding-left: 30px;
     margin: auto;
     transition: 0.3s ease-out;
+    pointer-events: none;
   }
 
   .navigation.activate {
     opacity: 1;
     transform: translate(-50%, -50%);
+    pointer-events: all;
   }
 
   /* HAMBURGER ICON STYLING AND FUNCTIONALITY */
@@ -497,6 +504,5 @@ a {
 
   sub {
     padding: 10px;
-    grid-column: 1/-1;
   }
 }
