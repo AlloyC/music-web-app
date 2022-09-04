@@ -169,13 +169,14 @@ nav {
   grid-gap: 20px;
   align-items: center;
   overflow-x: scroll;
+  width: 100%;
 }
 
 /* div representing each album cover */
 .horizontal-scroll-content {
   display: flex;
   flex-direction: column;
-
+  min-width: fit-content;
 }
 
 .horizontal-scroll-content img {
