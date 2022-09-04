@@ -31,6 +31,48 @@
   font-family: var(--ff-roboto);
 }
 
+/* MAIN TAG */
+main {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+/* NAVIGATION */
+.navigation {
+  grid-column: 1/2;
+  position: fixed;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-nav {
+  margin-bottom: 30px;
+}
+
+/* UPPER SECTION */
+#search-top-artist {
+  grid-column: 2/-1;
+  grid-row: 1/2;
+}
+
+#top-artists {
+  display: flex;
+  flex-direction: column;
+}
+
+/* div containing top artist heading */
+#top-artists div {
+  display: flex;
+}
+
+#horizontal-scroll {
+  display: flex;
+}
+
 /* GENERAL CLASSES */
 #main-section {
   background-image: linear-gradient(
@@ -41,6 +83,8 @@
   display: grid;
   grid-template-columns: 60% 40%;
   min-height: max-content;
+  grid-column: 2/-1;
+  grid-row: 2/3;
 }
 
 #my-playlist {
