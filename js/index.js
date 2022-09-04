@@ -383,13 +383,13 @@ repeat.addEventListener("click", () => {
   if (looping == false) {
     audio.loop = true;
     document.getElementById("repeat-img").src =
-      "../images/icons8-repeat-one-32.png";
+      "./images/icons8-repeat-one-32.png";
     looping = true;
   } else {
     audio.loop = false;
     looping = false;
     document.getElementById("repeat-img").src =
-      "../images/icons8-repeat-24.png";
+      "./images/icons8-repeat-24.png";
   }
 });
 //SHUFFLE
