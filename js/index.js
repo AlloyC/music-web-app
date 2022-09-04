@@ -58,6 +58,9 @@ const playToggle = document.getElementById("play/pause-img");
 const audio = document.querySelector("audio");
 const songList = document.querySelector("#container");
 const showAll = document.querySelector("#show");
+const hamburger = document.querySelector(".hamburger");
+const overlay = document.querySelector(".overlay");
+const navMenu = document.querySelector(".navigation");
 let datumId = [];
 let audioSrc = [];
 let playing = false;
@@ -97,7 +100,7 @@ fetch("js/songs.json")
         document
           .getElementById(datumArr)
           .addEventListener("click", function changeSong(e) {
-            e.preventDefault()
+            e.preventDefault();
             // toggling active class (highlighting the clicked/ currently playing song)
             datumId.forEach((datum) => {
               document.getElementById(datum).classList.remove("active");
@@ -312,8 +315,7 @@ repeat.addEventListener("click", () => {
   } else {
     audio.loop = false;
     looping = false;
-    document.getElementById("repeat-img").src =
-      "./images/icons8-repeat-24.png";
+    document.getElementById("repeat-img").src = "./images/icons8-repeat-24.png";
   }
 });
 //SHUFFLE
@@ -362,4 +364,17 @@ show.addEventListener("click", () => {
     show.style.borderRadius = "5px";
     show.classList.remove("showing");
   }
+});
+
+// HAMBURGER FUNCTIONALITY
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("activate");
+  navMenu.classList.toggle("activate");
+  overlay.classList.toggle("activate");
+});
+
+overlay.addEventListener("click", () => {
+  hamburger.classList.toggle("activate");
+  navMenu.classList.toggle("activate");
+  overlay.classList.remove("activate");
 });
