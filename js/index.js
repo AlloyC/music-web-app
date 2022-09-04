@@ -144,7 +144,7 @@ let lastPlayed ;
 let activeIndex;
 
 topArtist.forEach(eachArtist => {
-  artistList += `
+  artistList.innerHTML += `
   <div class="horizontal-scroll-content">
             <img id="artists-${eachArtist.id}" src="${eachArtist}" alt="" />
             <h3 id="artist-song-title-${eachArtist.id}">${eachArtist.title}</h3>
