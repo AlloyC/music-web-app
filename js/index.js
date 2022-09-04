@@ -35,84 +35,6 @@ let topArtist = [
     name: "Beyonce",
     song: "Renaissance",
   },
-  {
-    id: 8,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
-  },
-  {
-    id: 9,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
-  },
-  {
-    id: 10,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
-  },
-  {
-    id: 11,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
-  },
-  {
-    id: 12,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
-  },
-  {
-    id: 13,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
-  },
-  {
-    id: 14,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
-  },
-  {
-    id: 15,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
-  },
-  {
-    id: 16,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
-  },
-  {
-    id: 17,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
-  },
-  {
-    id: 18,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
-  },
-  {
-    id: 19,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
-  },
-  {
-    id: 20,
-    img: "./images/",
-    name: "Beyonce",
-    song: "Renaissance",
-  },
 ];
 
 const artistList = document.getElementById("horizontal-scroll");
@@ -169,6 +91,7 @@ fetch("js/songs.json")
             </li>`;
       datumId.push(datum.id);
       audioSrc.push(datum.src);
+
       //LISTENING FOR CLICK
       datumId.forEach((datumArr) => {
         document
