@@ -63,6 +63,7 @@ const overlay = document.querySelector(".overlay");
 const navMenu = document.querySelector(".navigation");
 let datumId = [];
 let audioSrc = [];
+let datumImg = [];
 let playing = false;
 let selected = false;
 let looping = false;
@@ -94,6 +95,7 @@ fetch("js/songs.json")
             </li>`;
       datumId.push(datum.id);
       audioSrc.push(datum.src);
+      datumImg.push(datum.img);
 
       //LISTENING FOR CLICK
       datumId.forEach((datumArr) => {
@@ -113,6 +115,7 @@ fetch("js/songs.json")
               datumArr + "-num"
             ).innerHTML = `<img class="icon" src="./images/icons8-speaker-24.png" alt="" />`;
             // changing song title, artist and duration in now playing card
+            songImg.src = datumImg[parseInt(datumArr) - 1];
             songTitle.innerText = document.getElementById(
               datumArr + "-title"
             ).innerText;
@@ -176,6 +179,7 @@ fetch("js/songs.json")
       ).innerHTML = `<img class="icon" src="./images/icons8-speaker-24.png" alt="" />`;
 
       // changing song title, artist and duration in now playing card
+      songImg.src = datumImg[activeIndex - 1];
       songTitle.innerText = document.getElementById(
         activeIndexId + "-title"
       ).innerText;
@@ -237,6 +241,7 @@ function nextSong() {
   lastPlayed = activeIndex;
 
   // changing song title, artist and duration in now playing card
+  songImg.src = datumImg[activeIndex]
   songTitle.innerText = document.getElementById(
     activeIndexId + "-title"
   ).innerText;
