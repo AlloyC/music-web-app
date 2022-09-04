@@ -457,11 +457,11 @@ a {
   }
 
   .navigation {
-    position: fixed;
+    position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    height: 80%;
+    top: 300px;
+    transform: translateX(-50%);
+    height: minmax(80%, 800px);
     width: 70%;
     z-index: 5;
     opacity: 0;
@@ -471,8 +471,9 @@ a {
     justify-content: center;
     align-items: flex-start;
     padding-left: 30px;
+    padding: 30px;
     margin: auto;
-    transition: 0.3s ease-out;
+    transition: 0.2s ease-out;
     pointer-events: none;
   }
 
