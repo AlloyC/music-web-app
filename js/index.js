@@ -159,6 +159,7 @@ fetch("js/songs.json")
       if (activeIndex <= 0) {
         activeIndex = activeIdArray.length;
       }
+      songImg.src = datumImg[activeIndex - 1];
       audio.src = audioSrc[activeIndex - 1];
       selected = true;
       playing = false;
@@ -179,7 +180,7 @@ fetch("js/songs.json")
       ).innerHTML = `<img class="icon" src="./images/icons8-speaker-24.png" alt="" />`;
 
       // changing song title, artist and duration in now playing card
-      songImg.src = datumImg[activeIndex - 1];
+      
       songTitle.innerText = document.getElementById(
         activeIndexId + "-title"
       ).innerText;
