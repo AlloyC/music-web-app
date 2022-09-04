@@ -168,6 +168,7 @@ nav {
   display: grid;
   grid-gap: 20px;
   align-items: center;
+  overflow-x: scroll;
 }
 
 /* div representing each album cover */
@@ -175,7 +176,6 @@ nav {
   display: flex;
   flex-direction: column;
 
-  overflow-x: scroll;
 }
 
 .horizontal-scroll-content img {
