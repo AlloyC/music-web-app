@@ -597,7 +597,7 @@ a {
   }
 
   .song h3 {
-    font-size: var(--fs-200);
+    font-size: 0.8rem;
     padding: 10px 0;
   }
 
