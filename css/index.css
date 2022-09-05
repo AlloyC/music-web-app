@@ -31,6 +31,14 @@
   font-family: var(--ff-roboto);
 }
 
+hr {
+  border: none;
+  background-color: var(--dark-white);
+  width: 90%;
+  margin: auto;
+  height: 1px;
+}
+
 /* CLICKABLE OVERLAY */
 .overlay.activate {
   position: absolute;
@@ -38,7 +46,7 @@
   height: 100%;
   z-index: 5;
   background-color: rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   pointer-events: all;
 }
 
@@ -60,7 +68,7 @@ main {
 /* SUB TAG */
 sub {
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   grid-column: 2 / 3;
   background-image: linear-gradient(
     45deg,
@@ -112,6 +120,14 @@ nav {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.nav-el p {
+  transition: 0.2s;
+}
+
+.nav-el p:hover {
+  color: red;
 }
 
 .nav-el i {
@@ -221,9 +237,9 @@ nav {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 20px;
+  margin-top: 20px;
   gap: 10px;
 }
-
 
 /* div housing album covers */
 #horizontal-scroll {
@@ -441,6 +457,51 @@ a {
   box-shadow: 0 3px 7px 2px rgba(0, 0, 0, 0.2);
 }
 
+/* People who worked on this project */
+.attribution {
+  font-size: 20px;
+  margin-top: 30px;
+  font-style: italic;
+}
+
+.attribution ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.attribution a {
+  color: var(--gray);
+}
+
+.attribution li {
+  margin-bottom: 8px;
+  display: flex;
+  overflow: initial;
+}
+
+.attribution li:nth-child(3) {
+  margin-bottom: 20px;
+}
+
+.attribution ul li a {
+  display: flex;
+  align-items: center;
+  overflow: initial;
+}
+
+/* icons */
+.fa-brands {
+  margin-left: 12px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.fa-brands:hover {
+  transform: translateY(-4px);
+  color: black;
+}
+
 /* RESPONSIVENESS */
 
 @media screen and (max-width: 900px) {
@@ -460,11 +521,11 @@ a {
     flex-direction: column;
     position: relative;
   }
-  
+
   #my-playlist {
     grid-row: 2 / 3;
   }
-  
+
   #now-playing {
     grid-row: 1 / 2;
   }
@@ -533,5 +594,9 @@ a {
 
   sub {
     padding: 10px;
+  }
+
+  .attribution {
+    margin-left: 20px;
   }
 }
