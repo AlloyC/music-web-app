@@ -324,7 +324,7 @@ nav {
 }
 
 .song h3 {
-  font-size: var(--fs-300);
+  font-size: var(--fs-400);
   padding: 10px 0;
 }
 
@@ -596,7 +596,19 @@ a {
     padding: 10px;
   }
 
+  .song h3 {
+    font-size: var(--fs-200);
+    padding: 10px 0;
+  }
+
   .attribution {
     margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .attribution,
+  .fa-brands {
+    font-size: 15px;
   }
 }
