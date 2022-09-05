@@ -58,8 +58,12 @@ const playToggle = document.getElementById("play/pause-img");
 const audio = document.querySelector("audio");
 const songList = document.querySelector("#container");
 const showAll = document.querySelector("#show");
+const hamburger = document.querySelector(".hamburger");
+const overlay = document.querySelector(".overlay");
+const navMenu = document.querySelector(".navigation");
 let datumId = [];
 let audioSrc = [];
+let datumImg = [];
 let playing = false;
 let selected = false;
 let looping = false;
@@ -91,13 +95,14 @@ fetch("js/songs.json")
             </li>`;
       datumId.push(datum.id);
       audioSrc.push(datum.src);
+      datumImg.push(datum.img);
 
       //LISTENING FOR CLICK
       datumId.forEach((datumArr) => {
         document
           .getElementById(datumArr)
           .addEventListener("click", function changeSong(e) {
-            e.preventDefault()
+            e.preventDefault();
             // toggling active class (highlighting the clicked/ currently playing song)
             datumId.forEach((datum) => {
               document.getElementById(datum).classList.remove("active");
@@ -110,6 +115,7 @@ fetch("js/songs.json")
               datumArr + "-num"
             ).innerHTML = `<img class="icon" src="./images/icons8-speaker-24.png" alt="" />`;
             // changing song title, artist and duration in now playing card
+            songImg.src = datumImg[parseInt(datumArr) - 1];
             songTitle.innerText = document.getElementById(
               datumArr + "-title"
             ).innerText;
@@ -153,6 +159,7 @@ fetch("js/songs.json")
       if (activeIndex <= 0) {
         activeIndex = activeIdArray.length;
       }
+      songImg.src = datumImg[activeIndex - 1];
       audio.src = audioSrc[activeIndex - 1];
       selected = true;
       playing = false;
@@ -173,6 +180,7 @@ fetch("js/songs.json")
       ).innerHTML = `<img class="icon" src="./images/icons8-speaker-24.png" alt="" />`;
 
       // changing song title, artist and duration in now playing card
+      
       songTitle.innerText = document.getElementById(
         activeIndexId + "-title"
       ).innerText;
@@ -234,6 +242,7 @@ function nextSong() {
   lastPlayed = activeIndex;
 
   // changing song title, artist and duration in now playing card
+  songImg.src = datumImg[activeIndex]
   songTitle.innerText = document.getElementById(
     activeIndexId + "-title"
   ).innerText;
@@ -312,8 +321,7 @@ repeat.addEventListener("click", () => {
   } else {
     audio.loop = false;
     looping = false;
-    document.getElementById("repeat-img").src =
-      "./images/icons8-repeat-24.png";
+    document.getElementById("repeat-img").src = "./images/icons8-repeat-24.png";
   }
 });
 //SHUFFLE
@@ -362,4 +370,17 @@ show.addEventListener("click", () => {
     show.style.borderRadius = "5px";
     show.classList.remove("showing");
   }
+});
+
+// HAMBURGER FUNCTIONALITY
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("activate");
+  navMenu.classList.toggle("activate");
+  overlay.classList.toggle("activate");
+});
+
+overlay.addEventListener("click", () => {
+  hamburger.classList.toggle("activate");
+  navMenu.classList.toggle("activate");
+  overlay.classList.remove("activate");
 });

@@ -31,6 +31,21 @@
   font-family: var(--ff-roboto);
 }
 
+/* CLICKABLE OVERLAY */
+.overlay.activate {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  pointer-events: all;
+}
+
+.overlay {
+  pointer-events: none;
+}
+
 /* MAIN TAG */
 main {
   display: grid;
@@ -39,6 +54,7 @@ main {
   height: minmax(100vh, 130vh);
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 /* SUB TAG */
@@ -55,7 +71,6 @@ sub {
 }
 
 nav {
-  position: relative;
   grid-column: 1/2;
   grid-row: 1/-1;
   height: 100%;
@@ -109,6 +124,33 @@ nav {
   margin-right: 15px;
 }
 
+/* HAMBURGER ICON STYLES */
+.hamburger {
+  padding: 5px;
+  display: none;
+  padding-bottom: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  height: auto;
+  z-index: 7;
+  overflow: initial;
+}
+
+.bar {
+  height: 3px;
+  width: 20px;
+  margin-top: 3px;
+  background-color: var(--black);
+  display: block;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+  overflow: initial;
+}
+
+.bar:nth-child(2) {
+  width: 25px;
+}
+
 /* UPPER SECTION */
 #search-top-artist {
   grid-column: 2/-1;
@@ -153,6 +195,20 @@ nav {
   font-size: 20px;
 }
 
+/* user */
+#user {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  width: max-content;
+  gap: 5px;
+}
+
+#username {
+  font-size: 1rem;
+}
+
 /* Start of Album covers */
 #top-artists {
   display: flex;
@@ -162,8 +218,12 @@ nav {
 /* div containing top artist heading */
 #top-artists div {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 20px;
+  gap: 10px;
 }
+
 
 /* div housing album covers */
 #horizontal-scroll {
@@ -178,8 +238,8 @@ nav {
 .horizontal-scroll-content {
   display: flex;
   flex-direction: column;
- min-width: fit-content;
- margin-top: 20px;
+  min-width: fit-content;
+  margin-top: 20px;
 }
 
 .horizontal-scroll-content img {
@@ -379,4 +439,99 @@ a {
   margin: 10px;
 
   box-shadow: 0 3px 7px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width: 900px) {
+  sub {
+    grid-template-rows: auto auto;
+  }
+
+  #main-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  #my-playlist {
+    grid-row: 2 / 3;
+  }
+  
+  #now-playing {
+    grid-row: 1 / 2;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    background-color: white;
+    overflow: initial;
+    z-index: 5;
+    padding: 10px 25px;
+    justify-content: flex-end;
+    box-shadow: 0 2px 2px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  .navigation {
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    transform: translateX(-50%);
+    height: minmax(80%, 800px);
+    width: 70%;
+    z-index: 5;
+    opacity: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 30px;
+    padding: 30px;
+    margin: auto;
+    transition: 0.2s ease-out;
+    pointer-events: none;
+  }
+
+  .navigation.activate {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    pointer-events: all;
+  }
+
+  /* HAMBURGER ICON STYLING AND FUNCTIONALITY */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .hamburger.activate {
+    border: 1px solid var(--black);
+  }
+
+  .hamburger.activate .bar:nth-child(2) {
+    opacity: 0;
+    width: initial;
+  }
+  .hamburger.activate .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  .hamburger.activate .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  sub {
+    padding: 10px;
+  }
 }
