@@ -84,7 +84,6 @@ fetch("js/songs.json")
   .then((res) => res.json())
   .then((data) => {
     audio.src = data[0].src;
-    audio.load();
     data.forEach((datum) => {
       songs.innerHTML += `<li>
           <a id="${datum.id}" class="song" href="#">
@@ -195,6 +194,7 @@ fetch("js/songs.json")
         activeIndexId + "-time"
       ).innerText;
     });
+    audio.load()
   });
 
 function nextSong() {
@@ -266,7 +266,6 @@ function pausePlay() {
     playing = true;
     audio.play();
     playToggle.src = "./images/icons8-pause-50.png";
-    setTimeout(function () {
       if (audio.network == 1) {
       duration.innerText =
         Math.floor(audio.duration / 60) + ":" + Math.floor(audio.duration % 60);
