@@ -83,6 +83,8 @@ topArtist.forEach((eachArtist) => {
 fetch("js/songs.json")
   .then((res) => res.json())
   .then((data) => {
+    audio.src = data[0].src;
+    audio.load();
     data.forEach((datum) => {
       songs.innerHTML += `<li>
           <a id="${datum.id}" class="song" href="#">
