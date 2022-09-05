@@ -267,9 +267,10 @@ function pausePlay() {
     audio.play();
     playToggle.src = "./images/icons8-pause-50.png";
     setTimeout(function () {
+      if (audio.network == 1) {
       duration.innerText =
         Math.floor(audio.duration / 60) + ":" + Math.floor(audio.duration % 60);
-    }, 700);
+      }
   } else if (playing == true && selected) {
     playing = false;
     audio.pause();
