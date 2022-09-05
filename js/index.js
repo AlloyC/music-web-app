@@ -61,6 +61,7 @@ const showAll = document.querySelector("#show");
 const hamburger = document.querySelector(".hamburger");
 const overlay = document.querySelector(".overlay");
 const navMenu = document.querySelector(".navigation");
+
 let datumId = [];
 let audioSrc = [];
 let datumImg = [];
@@ -83,6 +84,7 @@ topArtist.forEach((eachArtist) => {
 fetch("js/songs.json")
   .then((res) => res.json())
   .then((data) => {
+  audio.src = data[0].src;
     data.forEach((datum) => {
       songs.innerHTML += `<li>
           <a id="${datum.id}" class="song" href="#">
@@ -159,7 +161,7 @@ fetch("js/songs.json")
       if (activeIndex <= 0) {
         activeIndex = activeIdArray.length;
       }
-      songImg.src = datumImg[activeIndex - 1];
+        songImg.src = datumImg[activeIndex - 1];
       audio.src = audioSrc[activeIndex - 1];
       selected = true;
       playing = false;
@@ -193,6 +195,7 @@ fetch("js/songs.json")
         activeIndexId + "-time"
       ).innerText;
     });
+    audio.load()
   });
 
 function nextSong() {
@@ -264,10 +267,11 @@ function pausePlay() {
     playing = true;
     audio.play();
     playToggle.src = "./images/icons8-pause-50.png";
-    setTimeout(function () {
+      if (audio.network == 1) {
+        
       duration.innerText =
         Math.floor(audio.duration / 60) + ":" + Math.floor(audio.duration % 60);
-    }, 700);
+      }
   } else if (playing == true && selected) {
     playing = false;
     audio.pause();
@@ -384,3 +388,4 @@ overlay.addEventListener("click", () => {
   navMenu.classList.toggle("activate");
   overlay.classList.remove("activate");
 });
+
