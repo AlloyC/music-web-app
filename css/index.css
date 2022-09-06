@@ -31,6 +31,10 @@
   font-family: var(--ff-roboto);
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 hr {
   border: none;
   background-color: var(--dark-white);
